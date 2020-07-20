@@ -11,14 +11,20 @@ sdad
 """
 from LibreriaGL import *
 
+
+"""
+Se corrigio que tiraba la imagen y la coordenada volteada
+
+"""
+
 from Render import Render
 
 
+# ancho y altura
+prueba = Render(200, 300)
 
-prueba = Render(200, 200)
 
-
-prueba.punto(100,100)
+prueba.punto(100,150)
 
 print(prueba.pixels)
 

@@ -49,13 +49,13 @@ class Render(object):
 
 
     def glclear(self):
-        self.pixels = [[Fondo for x in range (self.width)] for y in range(self.height) ]
+        self.pixels = [[Fondo for y in range (self.width)] for x in range(self.height) ]
 
 
     # funcion que me deja hacer el punto x largo, y alto
 
-    def punto(self, x, y):
-        self.pixels[x][y] = self.Pcolor
+    def punto(self, x,y ):
+        self.pixels[y][x] = self.Pcolor
 
     # j balvin men
     #este colores me sirve para guardar el color que quiero pintar
