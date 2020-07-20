@@ -9,7 +9,7 @@ SR1 Points
 
 sdad
 """
-from LibreriaGL import *
+
 
 
 """
@@ -18,11 +18,14 @@ Se corrigio que tiraba la imagen y la coordenada volteada
 """
 
 from Render import Render
+from LibreriaGL import *
 
 
 # ancho y altura
-prueba = Render(200, 300)
 
+prueba = Render(Y, x)
+
+# printear cualquier cosa dentro del tamanio de la imagen
 
 prueba.punto(100,150)
 

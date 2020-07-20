@@ -49,6 +49,9 @@ Fondo = color(0,0,0)
 Cyan =  color(0,255,255)
 
 
+# posicion en x y en Y para printear cosas
+x= 300
+Y= 200
 
 
 
