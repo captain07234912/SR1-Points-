@@ -15,7 +15,7 @@ SR1 : Points
 class Render(object):
     def __init__(self, width, height):
         self.colorPintar = YELLOW
-        self.clearFondo = Fondo
+        self.Fondo = Fondo
         self.glCreateWindow(width, height)
         # ancho y largo de la imagen
 
@@ -23,8 +23,12 @@ class Render(object):
         self.width = width
         self.height = height
         self.glClear()
+        #tamani exacto de la ventana
         self.glViewport(0, 0, width, height)
 
+    """
+    define el area  de la imagen sobre la que vas a dibujar
+    """
     def glViewport(self, x, y, width, height):
         self.CoorxViewport = x
         self.CooryViewport = y
@@ -34,12 +38,15 @@ class Render(object):
     """funcion que llena toda la imagen de un solo color con pixeles   
          tomando la imagen como una matriz papu"""
     def glClear(self):
-        self.pixels = [[self.clearFondo for x in range(self.width)] for y in range(self.height)]
+        self.pixels = [[self.Fondo for x in range(self.width)] for y in range(self.height)]
 
     # funcion que me deeja ahcer el punto x largo y  alto
     def punto(self,x,y):
         self.pixels[y][x] = self.colorPintar
 
+    """ https://www.khronos.org/registry/OpenGL-Refpages/es2.0/xhtml/glViewport.xml
+    
+        link donde se utilizo la formula para el viewport"""
     # vertex relativo al viewport punto en pantalla
     def glVertex(self, x, y):
         pixelX = ( x + 1) * (self.ViewportWidth / 2) + self.CoorxViewport
@@ -56,7 +63,7 @@ class Render(object):
     # poner el color de fondo si quiere cuas
 
     def glClearColor(self, r, g, b):
-        self.clearFondo = color(r, g, b)
+        self.Fondo = color(r, g, b)
     # funcion que me deja escribir el BMP
 
     def glFinish(self, filename):
