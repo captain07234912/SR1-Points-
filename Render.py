@@ -53,8 +53,7 @@ class Render(object):
         pixelY =  (( y + 1) * (self.ViewportHEight / 2) + self.CooryViewport)
         self.pixels[int(pixelY)][int(pixelX)] = self.colorPintar
 
-    def glVertexespacio(self, x, y):
-        self.pixels[y][x] = self.colorPintar
+
 
     # j balvin men
     # este colores me sirve para guardar el color
