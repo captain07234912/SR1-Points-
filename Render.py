@@ -7,7 +7,7 @@ Graficas por computadora
 Render
 Jorge Suchite Carnet 15293
 07/07/2020
-SR1 : Points
+SR2 : Lines
 """
 
 
@@ -49,9 +49,9 @@ class Render(object):
         link donde se utilizo la formula para el viewport"""
     # vertex relativo al viewport punto en pantalla
     def glVertex(self, x, y):
-        pixelX = ( x + 1) * (self.ViewportWidth / 2) + self.CoorxViewport
-        pixelY = ( y + 1) * (self.ViewportHEight / 2) + self.CooryViewport
-        self.pixels[round(pixelY)][round(pixelX)] = self.colorPintar
+        pixelX =  (( x + 1) * (self.ViewportWidth / 2) + self.CoorxViewport)
+        pixelY =  (( y + 1) * (self.ViewportHEight / 2) + self.CooryViewport)
+        self.pixels[int(pixelY)][int(pixelX)] = self.colorPintar
 
     def glVertexespacio(self, x, y):
         self.pixels[y][x] = self.colorPintar
@@ -96,7 +96,12 @@ class Render(object):
 
         archivo.close()
 
+    #aca termina lo de puntos
 
+    ################################## Lineas##############################
+
+
+    #def glLinea(self, xi,yi,xn,yn):
 
 
                 
