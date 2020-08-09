@@ -1,36 +1,37 @@
-"""
-Universidad del Valle de Guatemala
-Graficas por computadora
-Principal
-Jorge Suchite
-Carnet 15293
-07/07/2020
-SR1 Points
-
-sdad
-"""
+from Render import Render, color
 
 
+########################### Lista de colores para probar
+Fondo = color(0,0,0)
+Blanco = color(1,1,1)
+CYAN = color(0,1,1)
+Red = color(1,0,0)
+BLUE = (0,0,1)
+YELLOW = (1,1,0)
 
-"""
-Se corrigio que tiraba la imagen y la coordenada volteada
+###########################################################
+# tamaño de la imagen
+prueba = Render(600, 600)
+# introduzca el tamaño del viewport
+prueba.glViewport(100, 100, 400, 400)
 
-"""
+# ingrese el color del fondo
+prueba.glClearColor(0,0,0)
 
-from Render import Render
-from LibreriaGL import *
+# ingrese el color para pintar
+prueba.glColor(1, 0, 0)
+prueba.glClear()
+# si quiere pintar un punto es aqui
+prueba.punto(150,275)
+prueba.glColor(1,0,0)
+prueba.punto(100,200)
 
-
-# ancho y altura
-
-prueba = Render(Y, x)
-
-# printear cualquier cosa dentro del tamanio de la imagen
-
-prueba.punto(100,150)
-
-print(prueba.pixels)
+# quiere pintar una linea, perfecto! aca es el espacio
 
 
-prueba.write('Puntoprueba.bmp')
+
+
+prueba.glFinish('PuntoPrueba.bmp')
+
+
 
